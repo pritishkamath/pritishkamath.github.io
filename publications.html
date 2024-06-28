@@ -96,30 +96,489 @@ Our work highlights the role of the well-known lower bounds of functions such as
 <ul>
 
 <li>
-<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Separating Computational and Statistical Differential Privacy (Under Plausible Assumptions)</b></a> [<a href="https://arxiv.org/pdf/2301.00104.pdf">pdf</a>]<br/>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Crosslingual Capabilities and Knowledge Barriers in Multilingual Large Language Models</b></a> [<a href="https://arxiv.org/pdf/2406.16135.pdf">pdf</a>]<br/>
+<a href="https://scholar.google.com/citations?user=D2SXVSYAAAAJ&hl=en">Lynn Chua</a>,
 <a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
-<a href="https://www.rahulilango.com/">Rahul Ilango</a>,
-Pritish Kamath, 
+<a href="https://hazelsuko07.github.io/yangsibo/">Yangsibo Huang</a>,
+Pritish Kamath,
 <a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
 <a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://www.linkedin.com/in/amersinha/">Amer Sinha</a>,
+<a href="https://alphapav.github.io/">Chulin Xie</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
 <br/>
-<b>Manuscript</b>, 2023<br/>
+<b>Manuscript</b>, 2024<br/>
 <div class="abs">
-<b>Abstract.</b> ...
+<b>Abstract.</b> Large language models (LLMs) are typically multilingual due to pretraining on
+diverse multilingual corpora. But can these models relate corresponding
+concepts across languages, effectively being crosslingual? This study evaluates
+six state-of-the-art LLMs on inherently crosslingual tasks. We observe that
+while these models show promising surface-level crosslingual abilities on
+machine translation and embedding space analyses, they struggle with deeper
+crosslingual knowledge transfer, revealing a crosslingual knowledge barrier in
+both general (MMLU benchmark) and domain-specific (Harry Potter quiz) contexts.
+We observe that simple inference-time mitigation methods offer only limited
+improvement. On the other hand, we propose fine-tuning of LLMs on
+mixed-language data, which effectively reduces these gaps, even when using
+out-of-domain datasets like WikiText. Our findings suggest the need for
+explicit optimization to unlock the full crosslingual potential of LLMs. Our
+code is publicly available at
+https://github.com/google-research/crosslingual-knowledge-barriers.
 </div>
 </li>
 
 <li>
-<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>On Differentially Private Counting on Trees</b></a> [<a href="https://arxiv.org/pdf/2211.11896.pdf">pdf</a>]<br/>
-<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>, 
-Pritish Kamath, 
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Mind the Privacy Unit! User-Level Differential Privacy for Language Model Fine-Tuning</b></a> [<a href="https://arxiv.org/pdf/2406.14322.pdf">pdf</a>]<br/>
+<a href="https://scholar.google.com/citations?user=D2SXVSYAAAAJ&hl=en">Lynn Chua</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+<a href="https://hazelsuko07.github.io/yangsibo/">Yangsibo Huang</a>,
+Pritish Kamath,
+<a href="https://daogaoliu.github.io/">Daogao Liu</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://www.linkedin.com/in/amersinha/">Amer Sinha</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+<b>Manuscript</b>, 2024<br/>
+<div class="abs">
+<b>Abstract.</b> Large language models (LLMs) have emerged as powerful tools for tackling
+complex tasks across diverse domains, but they also raise privacy concerns when
+fine-tuned on sensitive data due to potential memorization. While differential
+privacy (DP) offers a promising solution by ensuring models are `almost
+indistinguishable' with or without any particular privacy unit, current
+evaluations on LLMs mostly treat each example (text record) as the privacy
+unit. This leads to uneven user privacy guarantees when contributions per user
+vary. We therefore study user-level DP motivated by applications where it
+necessary to ensure uniform privacy protection across users. We present a
+systematic evaluation of user-level DP for LLM fine-tuning on natural language
+generation tasks. Focusing on two mechanisms for achieving user-level DP
+guarantees, Group Privacy and User-wise DP-SGD, we investigate design choices
+like data selection strategies and parameter tuning for the best
+privacy-utility tradeoff.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Differentially Private Optimization with Sparse Gradients</b></a> [<a href="https://arxiv.org/pdf/2404.10881.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+<a href="https://sites.google.com/view/cguzman">Cristóbal Guzmán</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>
+<br/>
+<b>Manuscript</b>, 2024<br/>
+<div class="abs">
+<b>Abstract.</b> Motivated by applications of large embedding models, we study differentially
+private (DP) optimization problems under sparsity of individual gradients. We
+start with new near-optimal bounds for the classic mean estimation problem but
+with sparse data, improving upon existing algorithms particularly for the
+high-dimensional regime. Building on this, we obtain pure- and approximate-DP
+algorithms with almost optimal rates for stochastic convex optimization with
+sparse gradients; the former represents the first nearly dimension-independent
+rates for this problem. Finally, we study the approximation of stationary
+points for the empirical loss in approximate-DP optimization and obtain rates
+that depend on sparsity instead of dimension, modulo polylogarithmic factors.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>How Private are DP-SGD Implementations?</b></a> [<a href="https://arxiv.org/pdf/2403.17673.pdf">pdf</a>]<br/>
+<a href="https://scholar.google.com/citations?user=D2SXVSYAAAAJ&hl=en">Lynn Chua</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://www.linkedin.com/in/amersinha/">Amer Sinha</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+International Conference on Machine Learning <b>(ICML)</b>, 2024<br/>
+<i>(Selected for Oral Presentation)</i><br/>
+<div class="abs">
+<b>Abstract.</b> We demonstrate a substantial gap between the privacy guarantees of the
+Adaptive Batch Linear Queries (ABLQ) mechanism under different types of batch
+sampling: (i) Shuffling, and (ii) Poisson subsampling; the typical analysis of
+Differentially Private Stochastic Gradient Descent (DP-SGD) follows by
+interpreting it as a post-processing of ABLQ. While shuffling-based DP-SGD is
+more commonly used in practical implementations, it has not been amenable to
+easy privacy analysis, either analytically or even numerically. On the other
+hand, Poisson subsampling-based DP-SGD is challenging to scalably implement,
+but has a well-understood privacy analysis, with multiple open-source
+numerically tight privacy accountants available. This has led to a common
+practice of using shuffling-based DP-SGD in practice, but using the privacy
+analysis for the corresponding Poisson subsampling version. Our result shows
+that there can be a substantial gap between the privacy analysis when using the
+two types of batch sampling, and thus advises caution in reporting privacy
+parameters for DP-SGD.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Individualized Privacy Accounting via Subsampling with Applications in Combinatorial Optimization</b></a> [<a href="https://arxiv.org/pdf/2405.18534.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://asealfon.github.io/">Adam Sealfon</a>
+<br/>
+International Conference on Machine Learning <b>(ICML)</b>, 2024<br/>
+<div class="abs">
+<b>Abstract.</b> In this work, we give a new technique for analyzing individualized privacy
+accounting via the following simple observation: if an algorithm is one-sided
+add-DP, then its subsampled variant satisfies two-sided DP. From this, we
+obtain several improved algorithms for private combinatorial optimization
+problems, including decomposable submodular maximization and set cover. Our
+error guarantees are asymptotically tight and our algorithm satisfies pure-DP
+while previously known algorithms (Gupta et al., 2010; Chaturvedi et al., 2021)
+are approximate-DP. We also show an application of our technique beyond
+combinatorial optimization by giving a pure-DP algorithm for the shifting heavy
+hitter problem in a stream; previously, only an approximateDP algorithm was
+known (Kaplan et al., 2021; Cohen & Lyu, 2023).
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>On Convex Optimization with Semi-Sensitive Features</b></a> [<a href="https://arxiv.org/pdf/2406.19040.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://hackmd.io/@raghum/index">Raghu Meka</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+Conference on Learning Theory <b>(COLT)</b>, 2024<br/>
+<div class="abs">
+<b>Abstract.</b> We study the differentially private (DP) empirical risk minimization (ERM)
+problem under the semi-sensitive DP setting where only some features are
+sensitive. This generalizes the Label DP setting where only the label is
+sensitive. We give improved upper and lower bounds on the excess risk for
+DP-ERM. In particular, we show that the error only scales polylogarithmically
+in terms of the sensitive domain size, improving upon previous results that
+scale polynomially in the sensitive domain size (Ghazi et al., 2021).
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Learning Neural Networks with Sparse Activations</b></a> [<a href="https://arxiv.org/pdf/2406.17989.pdf">pdf</a>]<br/>
+<a href="https://scholar.google.com/citations?user=MDfW21AAAAAJ&hl=en">Pranjal Awasthi</a>,
+<a href="https://nishanthdikkala.github.io/">Nishanth Dikkala</a>,
+Pritish Kamath,
+<a href="https://hackmd.io/@raghum/index">Raghu Meka</a>
+<br/>
+Conference on Learning Theory <b>(COLT)</b>, 2024<br/>
+<div class="abs">
+<b>Abstract.</b> A core component present in many successful neural network architectures, is
+an MLP block of two fully connected layers with a non-linear activation in
+between. An intriguing phenomenon observed empirically, including in
+transformer architectures, is that, after training, the activations in the
+hidden layer of this MLP block tend to be extremely sparse on any given input.
+Unlike traditional forms of sparsity, where there are neurons/weights which can
+be deleted from the network, this form of {\em dynamic} activation sparsity
+appears to be harder to exploit to get more efficient networks. Motivated by
+this we initiate a formal study of PAC learnability of MLP layers that exhibit
+activation sparsity. We present a variety of results showing that such classes
+of functions do lead to provable computational and statistical advantages over
+their non-sparse counterparts. Our hope is that a better theoretical
+understanding of {\em sparsely activated} networks would lead to methods that
+can exploit activation sparsity in practice.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Summary Reports Optimization in the Privacy Sandbox Attribution Reporting API</b></a> [<a href="https://arxiv.org/pdf/2311.13586.pdf">pdf</a>]<br/>
+<a href="https://scholar.google.com/citations?hl=en&user=QISU5wgAAAAJ">Hidayet Aksu</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://asealfon.github.io/">Adam Sealfon</a>,
+<a href="https://www.linkedin.com/in/avinash-varadarajan">Avinash V Varadarajan</a>
+<br/>
+Proceedings of Privacy Enhancing Technologies <b>(PoPETS)</b>, 2024<br/>
+<div class="abs">
+<b>Abstract.</b> The Privacy Sandbox Attribution Reporting API has been recently deployed by
+Google Chrome to support the basic advertising functionality of attribution
+reporting (aka conversion measurement) after deprecation of third-party
+cookies. The API implements a collection of privacy-enhancing guardrails
+including contribution bounding and noise injection. It also offers flexibility
+for the analyst to allocate the contribution budget.
+  In this work, we present methods for optimizing the allocation of the
+contribution budget for summary reports from the Attribution Reporting API. We
+evaluate them on real-world datasets as well as on a synthetic data model that
+we find to accurately capture real-world conversion data. Our results
+demonstrate that optimizing the parameters that can be set by the analyst can
+significantly improve the utility achieved by querying the API while satisfying
+the same privacy bounds.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Training Differentially Private Ad Prediction Models with Semi-Sensitive Features</b></a> [<a href="https://arxiv.org/pdf/2401.15246.pdf">pdf</a>]<br/>
+<a href="https://scholar.google.com/citations?user=D2SXVSYAAAAJ&hl=en">Lynn Chua</a>,
+<a href="https://www.linkedin.com/in/qiliang-cui-b6818a9/">Qiliang Cui</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Charlie Harrison,
+Pritish Kamath,
+<a href="http://walid.krichene.net/">Walid Krichene</a>,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://krishnagirinarra.github.io/">Krishna Giri Narra</a>,
+<a href="https://www.linkedin.com/in/amersinha/">Amer Sinha</a>,
+<a href="https://www.linkedin.com/in/avinash-varadarajan">Avinash Varadarajan</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+Privacy-Preserving Artificial Intelligence <b>(PPAI)</b> workshop, 2024<br/>
+<div class="abs">
+<b>Abstract.</b> Motivated by problems arising in digital advertising, we introduce the task
+of training differentially private (DP) machine learning models with
+semi-sensitive features. In this setting, a subset of the features is known to
+the attacker (and thus need not be protected) while the remaining features as
+well as the label are unknown to the attacker and should be protected by the DP
+guarantee. This task interpolates between training the model with full DP
+(where the label and all features should be protected) or with label DP (where
+all the features are considered known, and only the label should be protected).
+We present a new algorithm for training DP models with semi-sensitive features.
+Through an empirical evaluation on real ads datasets, we demonstrate that our
+algorithm surpasses in utility the baselines of (i) DP stochastic gradient
+descent (DP-SGD) run on all features (known and unknown), and (ii) a label DP
+algorithm run only on the known features (while discarding the unknown ones).
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>LabelDP-Pro: Learning with Label Differential Privacy via Projections</b></a> [<a href="https://openreview.net/pdf?id=JnYaF3vv3G">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+<a href="https://hazelsuko07.github.io/yangsibo/">Yangsibo Huang</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+International Conference on Learning Representations <b>(ICLR)</b>, 2024<br/>
+<div class="abs">
+<b>Abstract.</b> Label differentially private (label DP) algorithms seek to preserve the privacy of the labels in a training dataset in settings where the features are known to the adversary. In this work, we study a new family of label DP training algorithms. Unlike most prior label DP algorithms that have been based on label randomization, our algorithm naturally leverages the power of the central model of DP. It interleaves gradient projection operations with private stochastic gradient descent steps in order to improve the utility of the trained model while guaranteeing the privacy of the labels. We show that such projection-based algorithms can be made practical and that they improve on the state-of-the art for label DP training in the high-privacy regime. We complement our empirical evaluation with theoretical results shedding light on the efficacy of our method through the lens of bias-variance trade-offs.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>User-Level Differential Privacy With Few Examples Per User</b></a> [<a href="https://arxiv.org/pdf/2309.12500.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://hackmd.io/@raghum/index">Raghu Meka</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+Neural Information Processing Systems <b>(NeurIPS)</b>, 2023<br/>
+<i>(Selected for Oral Presentation)</i><br/>
+<div class="abs">
+<b>Abstract.</b> Previous work on user-level differential privacy (DP) [Ghazi et al. NeurIPS
+2021, Bun et al. STOC 2023] obtained generic algorithms that work for various
+learning tasks. However, their focus was on the example-rich regime, where the
+users have so many examples that each user could themselves solve the problem.
+In this work we consider the example-scarce regime, where each user has only a
+few examples, and obtain the following results:<br/>
+  1. For approximate-DP, we give a generic transformation of any item-level DP
+algorithm to a user-level DP algorithm. Roughly speaking, the latter gives a
+(multiplicative) savings of $O_{\varepsilon,\delta}(\sqrt{m})$ in terms of the
+number of users required for achieving the same utility, where $m$ is the
+number of examples per user. This algorithm, while recovering most known bounds
+for specific problems, also gives new bounds, e.g., for PAC learning.<br/>
+  2. For pure-DP, we present a simple technique for adapting the exponential
+mechanism [McSherry, Talwar FOCS 2007] to the user-level setting. This gives
+new bounds for a variety of tasks, such as private PAC learning, hypothesis
+selection, and distribution learning. For some of these problems, we show that
+our bounds are near-optimal.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Optimal Unbiased Randomizers for Regression with Label Differential Privacy</b></a> [<a href="https://arxiv.org/pdf/2312.05659.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/site/ashwinkumarbv/home">Ashwinkumar Badanidiyuru</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://scholar.google.com/citations?user=BvoT1eIAAAAJ&hl=en">Ethan Leeman</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://www.linkedin.com/in/avinash-varadarajan">Avinash V Varadarajan</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+Neural Information Processing Systems <b>(NeurIPS)</b>, 2023<br/>
+<div class="abs">
+<b>Abstract.</b> We propose a new family of label randomizers for training regression models
+under the constraint of label differential privacy (DP). In particular, we
+leverage the trade-offs between bias and variance to construct better label
+randomizers depending on a privately estimated prior distribution over the
+labels. We demonstrate that these randomizers achieve state-of-the-art
+privacy-utility trade-offs on several datasets, highlighting the importance of
+reducing bias when training neural networks with label DP. We also provide
+theoretical results shedding light on the structural properties of the optimal
+unbiased randomizers.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>On Computing Pairwise Statistics with Local Differential Privacy</b></a> [<a href="https://arxiv.org/pdf/2406.16305.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://asealfon.github.io/">Adam Sealfon</a>
+<br/>
+Neural Information Processing Systems <b>(NeurIPS)</b>, 2023<br/>
+<div class="abs">
+<b>Abstract.</b> We study the problem of computing pairwise statistics, i.e., ones of the form
+$\binom{n}{2}^{-1} \sum_{i \ne j} f(x_i, x_j)$, where $x_i$ denotes the input
+to the $i$th user, with differential privacy (DP) in the local model. This
+formulation captures important metrics such as Kendall's $\tau$ coefficient,
+Area Under Curve, Gini's mean difference, Gini's entropy, etc. We give several
+novel and generic algorithms for the problem, leveraging techniques from DP
+algorithms for linear queries.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Optimizing Hierarchical Queries for the Attribution Reporting API</b></a> [<a href="https://arxiv.org/pdf/2308.13510.pdf">pdf</a>]<br/>
+<a href="https://www.linkedin.com/in/matt-dawson-268b06a1">Matthew Dawson</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+Kapil Kumar,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://www.linkedin.com/in/luanbo">Bo Luan</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://nmundru.github.io/">Nishanth Mundru</a>,
+<a href="https://scholar.google.com/citations?user=zYILNn8AAAAJ&hl=en">Harikesh Nair</a>,
+<a href="https://asealfon.github.io/">Adam Sealfon</a>,
+<a href="https://www.shengyu-zhu.com/">Shengyu Zhu</a>
+<br/>
+<b>AdKDD</b> Workshop, 2023<br/>
+<div class="abs">
+<b>Abstract.</b> We study the task of performing hierarchical queries based on summary reports
+from the {\em Attribution Reporting API} for ad conversion measurement. We
+demonstrate that methods from optimization and differential privacy can help
+cope with the noise introduced by privacy guardrails in the API. In particular,
+we present algorithms for (i) denoising the API outputs and ensuring
+consistency across different levels of the tree, and (ii) optimizing the
+privacy budget across different levels of the tree. We provide an experimental
+evaluation of the proposed algorithms on public datasets.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>On User-Level Private Convex Optimization</b></a> [<a href="https://arxiv.org/pdf/2305.04912.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://hackmd.io/@raghum/index">Raghu Meka</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+International Conference on Machine Learning <b>(ICML)</b>, 2023<br/>
+<div class="abs">
+<b>Abstract.</b> We introduce a new mechanism for stochastic convex optimization (SCO) with
+user-level differential privacy guarantees. The convergence rates of this
+mechanism are similar to those in the prior work of Levy et al. (2021);
+Narayanan et al. (2022), but with two important improvements. Our mechanism
+does not require any smoothness assumptions on the loss. Furthermore, our
+bounds are also the first where the minimum number of users needed for
+user-level privacy has no dependence on the dimension and only a logarithmic
+dependence on the desired excess error. The main idea underlying the new
+mechanism is to show that the optimizers of strongly convex losses have low
+local deletion sensitivity, along with an output perturbation method for
+functions with low local deletion sensitivity, which could be of independent
+interest.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Ticketed Learning-Unlearning Schemes</b></a> [<a href="https://arxiv.org/pdf/2306.15744.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://ayush.sekhari.com/">Ayush Sekhari</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+Conference on Learning Theory <b>(COLT)</b>, 2023<br/>
+<div class="abs">
+<b>Abstract.</b> We consider the learning--unlearning paradigm defined as follows. First given
+a dataset, the goal is to learn a good predictor, such as one minimizing a
+certain loss. Subsequently, given any subset of examples that wish to be
+unlearnt, the goal is to learn, without the knowledge of the original training
+dataset, a good predictor that is identical to the predictor that would have
+been produced when learning from scratch on the surviving examples.
+  We propose a new ticketed model for learning--unlearning wherein the learning
+algorithm can send back additional information in the form of a small-sized
+(encrypted) ``ticket'' to each participating training example, in addition to
+retaining a small amount of ``central'' information for later. Subsequently,
+the examples that wish to be unlearnt present their tickets to the unlearning
+algorithm, which additionally uses the central information to return a new
+predictor. We provide space-efficient ticketed learning--unlearning schemes for
+a broad family of concept classes, including thresholds, parities,
+intersection-closed classes, among others.
+  En route, we introduce the count-to-zero problem, where during unlearning,
+the goal is to simply know if there are any examples that survived. We give a
+ticketed learning--unlearning scheme for this problem that relies on the
+construction of Sperner families with certain properties, which might be of
+independent interest.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Towards Separating Computational and Statistical Differential Privacy</b></a> [<a href="https://arxiv.org/pdf/2301.00104.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+<a href="https://www.rahulilango.com/">Rahul Ilango</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>
+<br/>
+Foundations of Computer Science <b>(FOCS)</b>, 2023<br/>
+<div class="abs">
+<b>Abstract.</b> Computational differential privacy (CDP) is a natural relaxation of the
+standard notion of (statistical) differential privacy (SDP) proposed by Beimel,
+Nissim, and Omri (CRYPTO 2008) and Mironov, Pandey, Reingold, and Vadhan
+(CRYPTO 2009). In contrast to SDP, CDP only requires privacy guarantees to hold
+against computationally-bounded adversaries rather than
+computationally-unbounded statistical adversaries. Despite the question being
+raised explicitly in several works (e.g., Bun, Chen, and Vadhan, TCC 2016), it
+has remained tantalizingly open whether there is any task achievable with the
+CDP notion but not the SDP notion. Even a candidate such task is unknown.
+Indeed, it is even unclear what the truth could be!
+  In this work, we give the first construction of a task achievable with the
+CDP notion but not the SDP notion, under the following strong but plausible
+cryptographic assumptions: (1) Non-Interactive Witness Indistinguishable
+Proofs, (2) Laconic Collision-Resistant Keyless Hash Functions, (3)
+Differing-Inputs Obfuscation for Public-Coin Samplers. In particular, we
+construct a task for which there exists an $\varepsilon$-CDP mechanism with
+$\varepsilon = O(1)$ achieving $1-o(1)$ utility, but any $(\varepsilon,
+\delta)$-SDP mechanism, including computationally-unbounded ones, that achieves
+a constant utility must use either a super-constant $\varepsilon$ or an
+inverse-polynomially large $\delta$.
+  To prove this, we introduce a new approach for showing that a mechanism
+satisfies CDP: first we show that a mechanism is "private" against a certain
+class of decision tree adversaries, and then we use cryptographic constructions
+to "lift" this into privacy against computationally bounded adversaries. We
+believe this approach could be useful to devise further tasks separating CDP
+from SDP.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>On Differentially Private Counting on Trees</b></a> [<a href="https://arxiv.org/pdf/2212.11967.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
 <a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
 <a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
 <a href="https://shlw.github.io/">Kewen Wu</a>
 <br/>
-<b>Manuscript</b>, 2023<br/>
+International Colloquium on Automata, Languages, and Programming <b>(ICALP)</b>, 2023<br/>
 <div class="abs">
-<b>Abstract.</b> We study the problem of performing counting queries at different levels in hierarchical structures while preserving individuals' privacy. We propose a new error measure for this setting by considering a combination of multiplicative and additive approximation to the query results. We examine known mechanisms in differential privacy (DP) and prove their optimality in the pure-DP setting. In the approximate-DP setting, we design new algorithms achieving significant improvement over known ones.
+<b>Abstract.</b> We study the problem of performing counting queries at different levels in
+hierarchical structures while preserving individuals' privacy. Motivated by
+applications, we propose a new error measure for this problem by considering a
+combination of multiplicative and additive approximation to the query results.
+We examine known mechanisms in differential privacy (DP) and prove their
+optimality, under this measure, in the pure-DP setting. In the approximate-DP
+setting, we design new algorithms achieving significant improvements over known
+ones.
 </div>
 </li>
 
@@ -141,20 +600,27 @@ International Conference on Learning Representations <b>(ICLR)</b>, 2023<br/>
 
 <li>
 <a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Private Ad Modeling with DP-SGD</b></a> [<a href="https://arxiv.org/pdf/2211.11896.pdf">pdf</a>]<br/>
-Carson Denison
-<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>, 
-Pritish Kamath, 
+Carson Denison,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
 <a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
 <a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
-Krishna Giri Narra,
-Amer Sinha,
-Avinash Varadarajan,
-Chiyuan Zhang
+<a href="https://krishnagirinarra.github.io/">Krishna Giri Narra</a>,
+<a href="https://www.linkedin.com/in/amersinha/">Amer Sinha</a>,
+<a href="https://www.linkedin.com/in/avinash-varadarajan">Avinash V Varadarajan</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
 <br/>
 AAAI Workshop on Privacy-Preserving Artificial Intelligence <b>(PPAI)</b>, 2023<br/>
-<i>(Selected for Long Presentation)</i>
 <div class="abs">
-<b>Abstract.</b> A well-known algorithm in privacy-preserving ML is differentially private stochastic gradient descent (DP-SGD). While this algorithm has been evaluated on text and image data, it has not been previously applied to ads data, which are notorious for their high class imbalance and sparse gradient updates. In this work we apply DP-SGD to several ad modeling tasks including predicting click-through rates, conversion rates, and number of conversion events, and evaluate their privacyutility trade-off on real-world datasets. Our work is the first to empirically demonstrate that DPSGD can provide both privacy and utility for ad modeling tasks.
+<b>Abstract.</b> A well-known algorithm in privacy-preserving ML is differentially private
+stochastic gradient descent (DP-SGD). While this algorithm has been evaluated
+on text and image data, it has not been previously applied to ads data, which
+are notorious for their high class imbalance and sparse gradient updates. In
+this work we apply DP-SGD to several ad modeling tasks including predicting
+click-through rates, conversion rates, and number of conversion events, and
+evaluate their privacy-utility trade-off on real-world datasets. Our work is
+the first to empirically demonstrate that DP-SGD can provide both privacy and
+utility for ad modeling tasks.
 </div>
 </li>
 
@@ -511,7 +977,7 @@ Identification of protein families is a computational biology challenge that nee
 </ul>
 <div id="footer">
 <div id="footer-text">
-Last updated on 2023-04-02. Originally created by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Last updated on 2024-06-27. Originally created by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
 </div>
 </div>
 </td>
