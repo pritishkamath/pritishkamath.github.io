@@ -96,6 +96,69 @@ Our work highlights the role of the well-known lower bounds of functions such as
 <ul>
 
 <li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Scaling Embedding Layers in Language Models</b></a> [<a href="https://arxiv.org/pdf/2502.01637.pdf">pdf</a>]<br/>
+<a href="https://dayu11.github.io/">Da Yu</a>,
+<a href="http://cohenwang.com/edith/">Edith Cohen</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+<a href="https://hazelsuko07.github.io/yangsibo/">Yangsibo Huang</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://daogaoliu.github.io/">Daogao Liu</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+<b>Manuscript</b>, 2025<br/>
+<div class="abs">
+<b>Abstract.</b> We propose SCONE ($S$calable, $C$ontextualized, $O$ffloaded, $N$-gram
+$E$mbedding), a new method for extending input embedding layers to enhance
+language model performance. To avoid increased decoding costs, SCONE retains
+the original vocabulary while introducing embeddings for a set of frequent
+$n$-grams. These embeddings provide contextualized representation for each
+input token and are learned with a separate model during training. After
+training, embeddings are precomputed and stored in off-accelerator memory;
+during inference, querying them has minimal impact on latency due to the low
+complexity of embedding lookups. SCONE enables two new scaling strategies:
+increasing the number of $n$-gram embeddings and scaling the model used to
+learn them, both while maintaining fixed accelerator usage during inference (in
+terms of FLOPS and memory). We show that scaling both aspects enables a model
+with 1B accelerator-resident parameters to outperform a 1.9B-parameter baseline
+across diverse corpora, while using only about half the FLOPS and accelerator
+memory during inference.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Urania: Differentially Private Insights into AI Use</b></a> [<a href="https://arxiv.org/pdf/2506.04681.pdf">pdf</a>]<br/>
+<a href="https://daogaoliu.github.io/">Daogao Liu</a>,
+<a href="http://cohenwang.com/edith/">Edith Cohen</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+<a href="https://kairouzp.github.io/">Peter Kairouz</a>,
+Pritish Kamath,
+<a href="https://sashaknop.com/">Alexander Knop</a>,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://asealfon.github.io/">Adam Sealfon</a>,
+<a href="https://dayu11.github.io/">Da Yu</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+Conference on Language Modeling <b>(COLM)</b>, 2025<br/>
+<div class="abs">
+<b>Abstract.</b> We introduce $Urania$, a novel framework for generating insights about LLM
+chatbot interactions with rigorous differential privacy (DP) guarantees. The
+framework employs a private clustering mechanism and innovative keyword
+extraction methods, including frequency-based, TF-IDF-based, and LLM-guided
+approaches. By leveraging DP tools such as clustering, partition selection, and
+histogram-based summarization, $Urania$ provides end-to-end privacy protection.
+Our evaluation assesses lexical and semantic content preservation, pair
+similarity, and LLM-based metrics, benchmarking against a non-private
+Clio-inspired pipeline (Tamkin et al., 2024). Moreover, we develop a simple
+empirical privacy evaluation that demonstrates the enhanced robustness of our
+DP pipeline. The results show the framework's ability to extract meaningful
+conversational insights while maintaining stringent user privacy, effectively
+balancing data utility with privacy preservation.
+</div>
+</li>
+
+<li>
 <a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Crosslingual Capabilities and Knowledge Barriers in Multilingual Large Language Models</b></a> [<a href="https://arxiv.org/pdf/2406.16135.pdf">pdf</a>]<br/>
 <a href="https://scholar.google.com/citations?user=D2SXVSYAAAAJ&hl=en">Lynn Chua</a>,
 <a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
@@ -107,23 +170,252 @@ Pritish Kamath,
 <a href="https://alphapav.github.io/">Chulin Xie</a>,
 <a href="https://pluskid.org/">Chiyuan Zhang</a>
 <br/>
-<b>Manuscript</b>, 2024<br/>
+Conference on Language Modeling <b>(COLM)</b>, 2025<br/>
 <div class="abs">
 <b>Abstract.</b> Large language models (LLMs) are typically multilingual due to pretraining on
 diverse multilingual corpora. But can these models relate corresponding
-concepts across languages, effectively being crosslingual? This study evaluates
-six state-of-the-art LLMs on inherently crosslingual tasks. We observe that
-while these models show promising surface-level crosslingual abilities on
-machine translation and embedding space analyses, they struggle with deeper
+concepts across languages, i.e., be crosslingual? This study evaluates
+state-of-the-art LLMs on inherently crosslingual tasks. We observe that while
+these models show promising surface-level crosslingual abilities on machine
+translation and embedding space analyses, they struggle with deeper
 crosslingual knowledge transfer, revealing a crosslingual knowledge barrier in
-both general (MMLU benchmark) and domain-specific (Harry Potter quiz) contexts.
-We observe that simple inference-time mitigation methods offer only limited
-improvement. On the other hand, we propose fine-tuning of LLMs on
-mixed-language data, which effectively reduces these gaps, even when using
-out-of-domain datasets like WikiText. Our findings suggest the need for
-explicit optimization to unlock the full crosslingual potential of LLMs. Our
-code is publicly available at
-https://github.com/google-research/crosslingual-knowledge-barriers.
+both general (MMLU benchmark) and domain-specific (Harry Potter quiz and TOFU
+benchmark) contexts. Since simple inference-time mitigation methods offer only
+limited improvement, we propose fine-tuning of LLMs on mixed-language data,
+which effectively reduces these gaps, even when using out-of-domain datasets
+like WikiText. Our findings suggest the need for explicit optimization to
+unlock the full crosslingual potential of LLMs. Our code is publicly available
+at https://github.com/google-research/crosslingual-knowledge-barriers.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>PREM: Privately Answering Statistical Queries with Relative Error</b></a> [<a href="https://arxiv.org/pdf/2502.14809.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+<a href="https://sites.google.com/view/cguzman">Cristóbal Guzmán</a>,
+Pritish Kamath,
+<a href="https://sashaknop.com/">Alexander Knop</a>,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://sachdevasushant.github.io/">Sushant Sachdeva</a>
+<br/>
+Conference on Learning Theory <b>(COLT)</b>, 2025<br/>
+<div class="abs">
+<b>Abstract.</b> We introduce $\mathsf{PREM}$ (Private Relative Error Multiplicative weight
+update), a new framework for generating synthetic data that achieves a relative
+error guarantee for statistical queries under $(\varepsilon, \delta)$
+differential privacy (DP). Namely, for a domain ${\cal X}$, a family ${\cal F}$
+of queries $f : {\cal X} \to \{0, 1\}$, and $\zeta > 0$, our framework yields a
+mechanism that on input dataset $D \in {\cal X}^n$ outputs a synthetic dataset
+$\widehat{D} \in {\cal X}^n$ such that all statistical queries in ${\cal F}$ on
+$D$, namely $\sum_{x \in D} f(x)$ for $f \in {\cal F}$, are within a $1 \pm
+\zeta$ multiplicative factor of the corresponding value on $\widehat{D}$ up to
+an additive error that is polynomial in $\log |{\cal F}|$, $\log |{\cal X}|$,
+$\log n$, $\log(1/\delta)$, $1/\varepsilon$, and $1/\zeta$. In contrast, any
+$(\varepsilon, \delta)$-DP mechanism is known to require worst-case additive
+error that is polynomial in at least one of $n, |{\cal F}|$, or $|{\cal X}|$.
+We complement our algorithm with nearly matching lower bounds.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Empirical Privacy Variance</b></a> [<a href="https://arxiv.org/pdf/2503.12314.pdf">pdf</a>]<br/>
+<a href="https://mirnegg.github.io/">Yuzheng Hu</a>,
+<a href="https://scholar.google.com/citations?hl=en&user=qd8WzBMAAAAJ">Fan Wu</a>,
+<a href="https://rxian.github.io/">Ruicheng Xian</a>,
+Yuhang Liu,
+<a href="https://lydiazakynthinou.com/">Lydia Zakynthinou</a>,
+Pritish Kamath,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>,
+<a href="http://luthuli.cs.uiuc.edu/~daf/">David Forsyth</a>
+<br/>
+International Conference on Machine Learning <b>(ICML)</b>, 2025<br/>
+<div class="abs">
+<b>Abstract.</b> We propose the notion of empirical privacy variance and study it in the
+context of differentially private fine-tuning of language models. Specifically,
+we show that models calibrated to the same $(\varepsilon, \delta)$-DP guarantee
+using DP-SGD with different hyperparameter configurations can exhibit
+significant variations in empirical privacy, which we quantify through the lens
+of memorization. We investigate the generality of this phenomenon across
+multiple dimensions and discuss why it is surprising and relevant. Through
+regression analysis, we examine how individual and composite hyperparameters
+influence empirical privacy. The results reveal a no-free-lunch trade-off:
+existing practices of hyperparameter tuning in DP-SGD, which focus on
+optimizing utility under a fixed privacy budget, often come at the expense of
+empirical privacy. To address this, we propose refined heuristics for
+hyperparameter selection that explicitly account for empirical privacy, showing
+that they are both precise and practically useful. Finally, we take preliminary
+steps to understand empirical privacy variance. We propose two hypotheses,
+identify limitations in existing techniques like privacy auditing, and outline
+open questions for future research.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>How Unique is Whose Web Browser? The role of demographics in browser fingerprinting among US users</b></a> [<a href="https://arxiv.org/pdf/2410.06954.pdf">pdf</a>]<br/>
+<a href="https://www.aberke.com/">Alex Berke</a>,
+<a href="https://enricobacis.com/">Enrico Bacis</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://www.linkedin.com/in/robin-lassonde-5140154b/">Robin Lassonde</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://www.umarsyed.com/">Umar Syed</a>
+<br/>
+Proceedings of Privacy Enhancing Technologies <b>(PoPETS)</b>, 2025<br/>
+<div class="abs">
+<b>Abstract.</b> Browser fingerprinting can be used to identify and track users across the
+Web, even without cookies, by collecting attributes from users' devices to
+create unique "fingerprints". This technique and resulting privacy risks have
+been studied for over a decade. Yet further research is limited because prior
+studies used data not publicly available. Additionally, data in prior studies
+lacked user demographics. Here we provide a first-of-its-kind dataset to enable
+further research. It includes browser attributes with users' demographics and
+survey responses, collected with informed consent from 8,400 US study
+participants. We use this dataset to demonstrate how fingerprinting risks
+differ across demographic groups. For example, we find lower income users are
+more at risk, and find that as users' age increases, they are both more likely
+to be concerned about fingerprinting and at real risk of fingerprinting.
+Furthermore, we demonstrate an overlooked risk: user demographics, such as
+gender, age, income level and race, can be inferred from browser attributes
+commonly used for fingerprinting, and we identify which browser attributes most
+contribute to this risk. Our data collection process also conducted an
+experiment to study what impacts users' likelihood to share browser data for
+open research, in order to inform future data collection efforts, with
+responses from 12,461 total participants. Female participants were
+significantly less likely to share their browser data, as were participants who
+were shown the browser data we asked to collect. Overall, we show the important
+role of user demographics in the ongoing work that intends to assess
+fingerprinting risks and improve user privacy, with findings to inform future
+privacy enhancing browser developments. The dataset and data collection tool we
+provide can be used to further study research questions not addressed in this
+work.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>On the Differential Privacy and Interactivity of Privacy Sandbox Reports</b></a> [<a href="https://arxiv.org/pdf/2412.16916.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+<a href="https://charlieharrison.xyz/about/">Charlie Harrison</a>,
+<a href="https://scholar.google.com/citations?user=4xgEvVMAAAAJ&hl=en">Arpana Hosabettu</a>,
+Pritish Kamath,
+<a href="https://sashaknop.com/">Alexander Knop</a>,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://scholar.google.com/citations?user=BvoT1eIAAAAJ&hl=en">Ethan Leeman</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://marianapr.github.io/">Mariana Raykova</a>,
+Vikas Sahu,
+<a href="https://scholar.google.com/citations?user=1FkrtpsAAAAJ&hl=en">Phillipp Schoppmann</a>
+<br/>
+Proceedings of Privacy Enhancing Technologies <b>(PoPETS)</b>, 2025<br/>
+<div class="abs">
+<b>Abstract.</b> The Privacy Sandbox initiative from Google includes APIs for enabling
+privacy-preserving advertising functionalities as part of the effort around
+limiting third-party cookies. In particular, the Private Aggregation API (PAA)
+and the Attribution Reporting API (ARA) can be used for ad measurement while
+providing different guardrails for safeguarding user privacy, including a
+framework for satisfying differential privacy (DP). In this work, we provide an
+abstract model for analyzing the privacy of these APIs and show that they
+satisfy a formal DP guarantee under certain assumptions. Our analysis handles
+the case where both the queries and database can change interactively based on
+previous responses from the API.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Balls-and-Bins Sampling for DP-SGD</b></a> [<a href="https://arxiv.org/pdf/2412.16802.pdf">pdf</a>]<br/>
+<a href="https://scholar.google.com/citations?user=D2SXVSYAAAAJ&hl=en">Lynn Chua</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+<a href="https://charlieharrison.xyz/about/">Charlie Harrison</a>,
+<a href="https://scholar.google.com/citations?user=BvoT1eIAAAAJ&hl=en">Ethan Leeman</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://www.linkedin.com/in/amersinha/">Amer Sinha</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+Artificial Intelligence and Statistics <b>(AISTATS)</b>, 2025<br/>
+<i>(Selected for Oral Presentation)</i><br/>
+<div class="abs">
+<b>Abstract.</b> We introduce the Balls-and-Bins sampling for differentially private (DP)
+optimization methods such as DP-SGD. While it has been common practice to use
+some form of shuffling in DP-SGD implementations, privacy accounting algorithms
+have typically assumed that Poisson subsampling is used instead. Recent work by
+Chua et al. (ICML 2024), however, pointed out that shuffling based DP-SGD can
+have a much larger privacy cost in practical regimes of parameters. In this
+work we show that the Balls-and-Bins sampling achieves the "best-of-both"
+samplers, namely, the implementation of Balls-and-Bins sampling is similar to
+that of Shuffling and models trained using DP-SGD with Balls-and-Bins sampling
+achieve utility comparable to those trained using DP-SGD with Shuffling at the
+same noise multiplier, and yet, Balls-and-Bins sampling enjoys
+similar-or-better privacy amplification as compared to Poisson subsampling in
+practical regimes.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Unlearn and Burn: Adversarial Machine Unlearning Requests Destroy Model Accuracy</b></a> [<a href="https://arxiv.org/pdf/2410.09591.pdf">pdf</a>]<br/>
+<a href="https://hazelsuko07.github.io/yangsibo/">Yangsibo Huang</a>,
+<a href="https://daogaoliu.github.io/">Daogao Liu</a>,
+<a href="https://scholar.google.com/citations?user=D2SXVSYAAAAJ&hl=en">Lynn Chua</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://srxzr.com/">Milad Nasr</a>,
+<a href="https://www.linkedin.com/in/amersinha/">Amer Sinha</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+International Conference on Learning Representations <b>(ICLR)</b>, 2025<br/>
+<div class="abs">
+<b>Abstract.</b> Machine unlearning algorithms, designed for selective removal of training
+data from models, have emerged as a promising approach to growing privacy
+concerns. In this work, we expose a critical yet underexplored vulnerability in
+the deployment of unlearning systems: the assumption that the data requested
+for removal is always part of the original training set. We present a threat
+model where an attacker can degrade model accuracy by submitting adversarial
+unlearning requests for data not present in the training set. We propose
+white-box and black-box attack algorithms and evaluate them through a case
+study on image classification tasks using the CIFAR-10 and ImageNet datasets,
+targeting a family of widely used unlearning methods. Our results show
+extremely poor test accuracy following the attack: 3.6% on CIFAR-10 and 0.4% on
+ImageNet for white-box attacks, and 8.5% on CIFAR-10 and 1.3% on ImageNet for
+black-box attacks. Additionally, we evaluate various verification mechanisms to
+detect the legitimacy of unlearning requests and reveal the challenges in
+verification, as most of the mechanisms fail to detect stealthy attacks without
+severely impairing their ability to process valid requests. These findings
+underscore the urgent need for research on more robust request verification
+methods and unlearning protocols, should the deployment of machine unlearning
+systems become more prevalent in the future.
+</div>
+</li>
+
+<li>
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Scalable DP-SGD: Shuffling vs. Poisson Subsampling</b></a> [<a href="https://arxiv.org/pdf/2411.04205.pdf">pdf</a>]<br/>
+<a href="https://scholar.google.com/citations?user=D2SXVSYAAAAJ&hl=en">Lynn Chua</a>,
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
+<a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
+<a href="https://www.linkedin.com/in/amersinha/">Amer Sinha</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
+<br/>
+Neural Information Processing Systems <b>(NeurIPS)</b>, 2024<br/>
+<div class="abs">
+<b>Abstract.</b> We provide new lower bounds on the privacy guarantee of the multi-epoch
+Adaptive Batch Linear Queries (ABLQ) mechanism with shuffled batch sampling,
+demonstrating substantial gaps when compared to Poisson subsampling; prior
+analysis was limited to a single epoch. Since the privacy analysis of
+Differentially Private Stochastic Gradient Descent (DP-SGD) is obtained by
+analyzing the ABLQ mechanism, this brings into serious question the common
+practice of implementing shuffling-based DP-SGD, but reporting privacy
+parameters as if Poisson subsampling was used. To understand the impact of this
+gap on the utility of trained machine learning models, we introduce a practical
+approach to implement Poisson subsampling at scale using massively parallel
+computation, and efficiently train models with the same. We compare the utility
+of models trained with Poisson-subsampling-based DP-SGD, and the optimistic
+estimates of utility when using shuffling, via our new lower bounds on the
+privacy guarantee of ABLQ with shuffling.
 </div>
 </li>
 
@@ -133,17 +425,18 @@ https://github.com/google-research/crosslingual-knowledge-barriers.
 <a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
 <a href="https://hazelsuko07.github.io/yangsibo/">Yangsibo Huang</a>,
 Pritish Kamath,
+<a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
 <a href="https://daogaoliu.github.io/">Daogao Liu</a>,
 <a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
 <a href="https://www.linkedin.com/in/amersinha/">Amer Sinha</a>,
 <a href="https://pluskid.org/">Chiyuan Zhang</a>
 <br/>
-<b>Manuscript</b>, 2024<br/>
+Conference on Language Modeling <b>(COLM)</b>, 2024<br/>
 <div class="abs">
 <b>Abstract.</b> Large language models (LLMs) have emerged as powerful tools for tackling
 complex tasks across diverse domains, but they also raise privacy concerns when
 fine-tuned on sensitive data due to potential memorization. While differential
-privacy (DP) offers a promising solution by ensuring models are `almost
+privacy (DP) offers a promising solution by ensuring models are 'almost
 indistinguishable' with or without any particular privacy unit, current
 evaluations on LLMs mostly treat each example (text record) as the privacy
 unit. This leads to uneven user privacy guarantees when contributions per user
@@ -165,7 +458,7 @@ Pritish Kamath,
 <a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
 <a href="https://pasin30055.github.io/">Pasin Manurangsi</a>
 <br/>
-<b>Manuscript</b>, 2024<br/>
+Neural Information Processing Systems <b>(NeurIPS)</b>, 2024<br/>
 <div class="abs">
 <b>Abstract.</b> Motivated by applications of large embedding models, we study differentially
 private (DP) optimization problems under sparsity of individual gradients. We
@@ -583,18 +876,25 @@ ones.
 </li>
 
 <li>
-<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Regression with Label Differential Privacy</b></a> [<a href="https://arxiv.org/pdf/2211.11896.pdf">pdf</a>]<br/>
-<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>, 
-Pritish Kamath, 
+<a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b>Regression with Label Differential Privacy</b></a> [<a href="https://arxiv.org/pdf/2212.06074.pdf">pdf</a>]<br/>
+<a href="https://sites.google.com/view/badihghazi/home">Badih Ghazi</a>,
+Pritish Kamath,
 <a href="https://sites.google.com/site/ravik53/">Ravi Kumar</a>,
-Ethan Leeman,
+<a href="https://scholar.google.com/citations?user=BvoT1eIAAAAJ&hl=en">Ethan Leeman</a>,
 <a href="https://pasin30055.github.io/">Pasin Manurangsi</a>,
-Avinash Varadarajan,
-Chiyuan Zhang
+<a href="https://www.linkedin.com/in/avinash-varadarajan">Avinash V Varadarajan</a>,
+<a href="https://pluskid.org/">Chiyuan Zhang</a>
 <br/>
 International Conference on Learning Representations <b>(ICLR)</b>, 2023<br/>
 <div class="abs">
-<b>Abstract.</b> We study the task of training regression models with the guarantee of label differential privacy (DP). Based on a global prior distribution on label values, which could be obtained privately, we derive a label DP randomization mechanism that is optimal under a given regression loss function. We prove that the optimal mechanism takes the form of a "randomized response on bins", and propose an efficient algorithm for finding the optimal bin values. We carry out a thorough experimental evaluation on several datasets demonstrating the efficacy of our algorithm.
+<b>Abstract.</b> We study the task of training regression models with the guarantee of label
+differential privacy (DP). Based on a global prior distribution on label
+values, which could be obtained privately, we derive a label DP randomization
+mechanism that is optimal under a given regression loss function. We prove that
+the optimal mechanism takes the form of a "randomized response on bins", and
+propose an efficient algorithm for finding the optimal bin values. We carry out
+a thorough experimental evaluation on several datasets demonstrating the
+efficacy of our algorithm.
 </div>
 </li>
 
